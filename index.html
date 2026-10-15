@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#430F1F">
+<meta name="description" content="Yasmim Studio. Calendário editorial, planejamento de publicações e editor de catálogo de procedimentos.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Yasmim Studio">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./assets/icon-192.png">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<title>Yasmim Studio | Planejamento & Catálogos</title>
+</head>
+<body>
+<div id="shell">
+  <aside class="sidebar" aria-label="Navegação principal">
+    <div class="identity"><span class="identity-icon" id="sidebarLogo">Y</span><div class="identity-text"><strong>Yasmim<span class="brand-sub"> Studio</span></strong><small>CONTEÚDO & ESTÉTICA</small></div></div>
+    <div class="side-rule"></div>
+    <nav class="side-links" id="sideNav">
+      <button data-nav="home" class="side-link active"><span data-ico="calendar"></span><span>Calendário</span></button>
+      <button data-nav="planner" class="side-link"><span data-ico="layers"></span><span>Planejamento</span></button>
+      <button data-nav="catalog" class="side-link"><span data-ico="book"></span><span>Catálogos</span></button>
+      <button data-nav="guides" class="side-link"><span data-ico="file"></span><span>Biblioteca</span></button>
+    </nav>
+    <div class="side-spacer"></div>
+    <button class="side-link sidebar-settings" data-nav="settings"><span data-ico="settings"></span><span>Preferências</span></button>
+    <div class="side-signature"><span>DESENVOLVIDO POR</span><a href="https://rauldesigner.com.br" target="_blank" rel="noopener">Raul Designer <span aria-hidden="true">↗</span></a></div>
+  </aside>
+  <div class="mobile-head"><div class="mobile-brand"><span class="mobile-monogram">Y</span><div><strong>Yasmim Studio</strong><small>PLANEJAMENTO EDITORIAL</small></div></div><div class="mobile-head-actions"><button id="mobileNew" class="icon-button" aria-label="Nova publicação"><span data-ico="plus"></span></button><button class="icon-button" data-nav="settings" aria-label="Preferências"><span data-ico="settings"></span></button></div></div>
+  <div class="main-area">
+    <header class="top-header"><div class="breadcrumb"><span id="crumbPre">YASMIM STUDIO</span><span class="slash">/</span><strong id="crumbTitle">Calendário</strong></div><div class="header-actions"><span class="save-status" id="saveStatus"><span class="save-dot"></span> Salvo neste dispositivo</span><button class="avatar-button" id="openSettings" aria-label="Abrir preferências">YL</button></div></header>
+    <main id="view" tabindex="-1"></main>
+    <footer class="footer"><span>YASMIM STUDIO · 2026</span><span>Desenvolvido por <a href="https://rauldesigner.com.br" rel="noopener" target="_blank">Raul Designer</a> · <a href="https://instagram.com/rauldesigner" rel="noopener" target="_blank">@rauldesigner</a></span></footer>
+  </div>
+  <nav class="mobile-nav" aria-label="Navegação inferior">
+    <button class="mobile-item active" data-nav="home"><span data-ico="calendar"></span><span>Calendário</span></button>
+    <button class="mobile-item" data-nav="planner"><span data-ico="layers"></span><span>Posts</span></button>
+    <button class="mobile-item" data-nav="catalog"><span data-ico="book"></span><span>Catálogos</span></button>
+    <button class="mobile-item" data-nav="guides"><span data-ico="file"></span><span>Biblioteca</span></button>
+  </nav>
+</div>
+<div id="modalHost"></div><div id="toast" role="status" aria-live="polite"></div>
+<script src="./seed.js"></script><script src="./vendor/jszip.min.js"></script><script src="./catalog.js"></script><script src="./app.js"></script>
+</body>
+</html>
