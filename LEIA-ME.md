@@ -1,77 +1,64 @@
-# Yasmim Studio 4.1 — Bordeaux Editorial
+# Yasmim Studio 4.2 — Catálogo e planejamento
 
-Site estático para planejamento de conteúdo e montagem de catálogos, desenvolvido por **Raul Designer**. Layout mobile-first com foco em Safari/iPhone.
+Projeto estático para GitHub Pages, responsivo e preparado para iPhone. Desenvolvimento e design: Raul Designer — https://rauldesigner.com.br — https://instagram.com/rauldesigner.
 
-## Publicação no GitHub Pages
+## Como publicar
 
-1. Crie um repositório **novo** no GitHub.
-2. Envie **todos os arquivos desta pasta** para a raiz dele; o arquivo `index.html` precisa aparecer na raiz. Preserve as pastas `vendor/` e `assets/`.
-3. Vá em `Settings → Pages → Build and deployment` e escolha `Deploy from a branch` → `main` → `/ (root)`.
-4. Aguarde a publicação no endereço parecido com `https://usuario.github.io/nome-do-repositorio/`.
-5. No iPhone: Safari → Compartilhar → Adicionar à Tela de Início. Se possível, faça o primeiro acesso com internet.
+1. Faça um **backup** dos dados na versão já publicada (Preferências → Exportar backup).
+2. No repositório do site atual, substitua **todos os arquivos deste pacote**, mantendo as pastas `assets/` e `vendor/`. Faça isso no ramo usado pelo GitHub Pages.
+3. Em **Settings → Pages**, configure **Deploy from a branch** e selecione o ramo correto e `/ (root)`.
+4. Aguarde o deploy, abra o mesmo endereço no Safari e atualize. Se a versão antiga ficar em cache, feche e reabra o site/ícone da tela inicial.
+5. Se tiver feito novas alterações e quiser recuperá-las em outro aparelho, importe seu backup pelo menu Preferências.
 
-## Principais funções
+No GitHub, envie os **arquivos extraídos**, não apenas o ZIP.
 
-- **Calendário:** dia atual, datas com post, conteúdo selecionado, navegação entre meses.
-- **Planejamento:** 26 publicações originais de nov/dez de 2026; criação, edição, exclusão, filtros, status, detalhes e cópia de legendas.
-- **Primeiros passos por eventos:** abrir publicação, salvar agendamento novo, marcar um post como publicado e editar o catálogo. Apenas ações reais mudam o progresso.
-- **Catálogos:** editor de páginas (capa, sobre, serviços, valores, cuidados, contato, página livre), imagens, logo, nome, preços, promoções, fontes, cinco variações premium, PNG, ZIP, PDF e PDF otimizado.
-- **Biblioteca:** Stories, tutorais, perguntas e respostas provenientes do material original.
-- **Preferências:** marca, logo, exportação/importação de backup e informações de armazenamento.
-- **PWA:** manifesto, ícones provisórios, versão offline dos arquivos centrais após acesso online.
+## Novidades da 4.2
 
-## Onde os dados ficam
+- Interface e catálogo com fonte **Montserrat** como padrão. O carregamento do Google Fonts depende de conexão; em modo offline usa fontes de sistema semelhantes. Georgia e Baskerville continuam disponíveis como escolhas opcionais no catálogo.
+- Seletor de **nome do arquivo** na exportação, com padrão **Catálogo de serviços Yasmim Lohana**.
+- Correção do desenho das fotos em páginas de apresentação, cuidados, contato, valores e demais seções (não somente capa).
+- Ajuste de imagem ao quadro por recorte, arrastar e zoom, além de ajuste posterior de **tamanho da fotografia** no editor.
+- Ajustes **independentes por página** de cor de fundo, cor de destaque, textura (nenhuma, linhas, grade, pontos, arcos, linho), tamanho de títulos e textos, além de controles e textos do cabeçalho e rodapé.
+- Botão **Aplicar aparência em todas as páginas** copia aparência, não fotos nem conteúdo.
+- **Desfazer/Refazer** no editor, com histórico de até 40 estados durante a sessão.
+- **Tutorial interativo** com cinco ações reais: selecionar página, editar texto, adicionar foto, personalizar estilo e exportar.
+- Cores de texto automaticamente adaptadas para contraste melhor quando uma página recebe um fundo claro ou escuro.
 
-**No navegador do aparelho**, em IndexedDB (ou fallback local quando disponível). O GitHub Pages NÃO grava as alterações no repositório, não sincroniza celulares e não oferece autenticação. Dados locais podem ser perdidos caso a usuária limpe o Safari, troque a URL, desinstale o atalho, etc.
+## Como editar no celular
 
-**Se estiver migrando do site antigo para um REPOSITÓRIO NOVO:** a URL será diferente, portanto exporte primeiro o backup JSON antigo e importe na versão 4.0, se existirem alterações importantes. Para atualizações futuras na mesma URL, faça backup antes mesmo que os dados normalmente persistam.
+1. Entre em **Catálogos** e selecione a página na faixa horizontal.
+2. Toque em **Texto** (títulos, valores, descrição), **Foto** (upload, recorte e tamanho) ou **Estilo** (tipografia, fundo, texturas e cabeçalho/rodapé).
+3. Em **Foto**, escolha imagem JPG, PNG ou WebP, arraste e amplie no quadro e confirme. Em seguida, ajuste o tamanho em `65–185%`. Imagens HEIC/HEIF podem precisar de conversão conforme o Safari.
+4. Em **Estilo**, personalize só a página atual ou escolha **Aplicar aparência em todas as páginas**.
+5. Se cometer um erro, use **Desfazer** e **Refazer** perto do botão de tutorial.
+6. Toque em **Exportar**; altere o nome, escolha PNG, ZIP de imagens, PDF de alta qualidade ou otimizado. Aguarde o painel **Arquivo pronto** para baixar, abrir ou compartilhar.
 
-## PDF: alta qualidade x otimizado
+## Tutorial interativo
 
-PDFs são montados a partir de imagens de cada página. Os dois conservam composição visual; a versão otimizada usa compressão, portanto não é matematicamente sem perda. Para gráfica e impressão profissional, finalize em fluxo de pré-impressão com sangria e perfis de cor adequados. O PDF gerado é ideal para compartilhamento digital.
+Abra **Catálogos → Tutorial interativo**. Cada etapa muda de estado ao realizar a ação correspondente. O botão **Ir para esta etapa** orienta ou abre a ferramenta, mas **não conclui automaticamente** o passo. O progresso é salvo com o catálogo neste aparelho.
 
-## Observações
+## Dados e limitações
 
-- Nem todos os dados de marca foram fornecidos; logo, valores e contato permanecem editáveis, sem inventar informações comerciais.
-- Revisar orientações e promessas técnicas dos textos fornecidos antes de publicar para clientes; algumas podem estar excessivamente categóricas.
-- Fonte editorial Google Fonts pode não estar disponível offline; existem fallbacks locais.
-- Não hospede dados pessoais ou credenciais de clientes no GitHub público.
-- Testado em Chromium em telas simuladas de 320, 390 e 1440 px e PDF gerado localmente. **Não testado em Safari/iPhone físico.**
+- As alterações são gravadas por **IndexedDB**, com alternativa por `localStorage` quando disponível. Se apagar os dados do site, trocar o domínio ou usar outro aparelho, poderá precisar restaurar um backup.
+- A atualização no mesmo domínio normalmente preserva o armazenamento, pois a chave IndexedDB foi mantida como `yasmim-studio-db` e `docs/main`. Mesmo assim, **faça backup antes do deploy**.
+- **Desfazer e refazer são mantidos apenas durante a sessão aberta**; atualizações/recarregamentos limpam o histórico. Os dados editados, porém, são persistidos normalmente.
+- GitHub Pages hospeda o código estático e **não grava os dados de volta no repositório**. Nunca insira tokens pessoais do GitHub dentro de JavaScript público.
+- O catálogo exportado é baseado em imagens de página. O PDF é visualmente fiel, mas o texto no PDF não é selecionável.
+- Para reduzir riscos ao compartilhar fotos de clientes, use somente imagens com autorização e não divulgue dados pessoais sem consentimento.
 
-## Arquivos
+## Arquivos principais
 
-- `index.html` — estrutura e navegação
-- `style.css` — identidade Bordeaux Editorial responsiva
-- `app.js` — calendário, postagens, onboarding, formulários, persistência e interface
-- `catalog.js` — renderização e exportação de catálogos
-- `seed.js` — conteúdos e guias originais
-- `vendor/` — JSZip local
-- `assets/` — ícones da PWA (provisórios)
-- `manifest.webmanifest` e `sw.js` — PWA/offline
-- `01_PESQUISA_UI_PREMIUM.md` — relatório de pesquisa e referências
-- `02_AUDITORIA_COMPARATIVA_E_REDESIGN.md` — relatório da v3 vs v4 e testes
+- `index.html` — estrutura do aplicativo
+- `style.css` — interface e responsividade
+- `app.js` — navegação, formulários, editor, onboarding, histórico e exportação
+- `catalog.js` — renderizador canvas, recorte/layout e criação de PDFs/PNG
+- `seed.js` — 26 conteúdos originais e guias
+- `sw.js` — cache PWA versão 4.2
+- `manifest.webmanifest` e `assets/` — ícones/instalação
+- `vendor/jszip.min.js` — geração de ZIP local sem CDN
 
-**Créditos:** https://rauldesigner.com.br · https://instagram.com/rauldesigner
+## Testes efetuados
 
-## Atualização 4.1 — 16/10/2026
+Verificações automatizadas com Chromium e viewport mobile simulado (390 px): seleção de páginas, edição, upload e recorte na página 2, ajustes de imagem/tamanho/textura/cor, ocultação de cabeçalho, desfazer/refazer, avanço das etapas e exportação do PDF otimizado com nome customizado. O renderizador foi testado com foto em sete tipos de página. O PDF gerado de seis páginas foi aberto com PyMuPDF e inspecionado.
 
-- **Novo editor de catálogo no iPhone:** seleção horizontal de páginas, prévia em destaque e barra próxima ao polegar com Texto, Foto, Estilo e PDF. Campos abrem em painel inferior, sem precisar ficar subindo e descendo.
-- **Fotos:** seleção de imagem → janela para arrastar, ampliar e ajustar ao quadro da página → confirmar. Recorte é aplicado de modo idêntico na prévia e no arquivo exportado; tipos de página adicionais exibem a foto quando informada.
-- **Fontes:** opção de Luxo revisada, sem estilo cursivo ornamental, com Baskerville/Palatino/Georgia em alternativa legível. Mantidas Editorial, Contemporânea e Marcante.
-- **Exportação:** correção de falha de renderização na capa com logo; após gerar PNG, ZIP ou PDF é exibida a tela **Arquivo pronto** com links de download e, para PDF, abertura no navegador e compartilhamento sob ação direta do usuário. O iOS exige a confirmação do usuário para algumas operações.
-- **Persistência:** mantido o banco existente (`yasmim-studio-db`) e a estrutura dos dados da v4; a URL precisa ser a mesma para recuperar edições locais. Faça um backup antes de atualizar.
-- **Cache PWA:** versão incrementada no service worker para baixar o código novo.
-
-### Como atualizar com segurança
-
-1. No site antigo, abra Preferências e **exporte um backup** em JSON.
-2. No GitHub, substitua os arquivos pelos desta versão, preservando pastas e URLs. Não apague o repositório se deseja manter o endereço.
-3. No iPhone, feche o site/app, abra novamente conectado à internet e aguarde a atualização. Caso apareça a versão antiga, abra pelo Safari e atualize.
-4. Faça um teste real com uma foto, uma página e o PDF antes de enviar o catálogo às clientes.
-
-### Limites conhecidos
-
-- A versão foi testada com Chromium, incluindo simulação de tela móvel, upload, arraste/ampliação e PDF de seis páginas; **não foi testada em um iPhone físico com Safari**.
-- A exportação PDF otimizada tem compressão perceptual (não é literalmente sem perdas), adequada a envio digital.
-- Fotos HEIC/HEIF dependem do suporte do navegador para decodificação; caso uma imagem não abra, converta para JPG ou PNG.
-- A janela de recorte salva a composição da fotografia. Para recuperar partes eliminadas num recorte anterior, selecione novamente a imagem original.
+**Importante:** ainda é necessário um teste final com um **iPhone físico no Safari**, sobretudo para abrir o seletor de fotos, salvar em Arquivos e verificar o funcionamento offline após publicação. Não alegamos cobertura de todos os dispositivos/versões do iOS.
