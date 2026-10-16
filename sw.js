@@ -1,4 +1,4 @@
-const CACHE='yasmim-studio-v4-20261015-01';
+const CACHE='yasmim-studio-v4-1-20261016-01';
 const ASSETS=['./','./index.html','./style.css','./seed.js','./app.js','./catalog.js','./vendor/jszip.min.js','./manifest.webmanifest','./assets/icon-192.png','./assets/icon-512.png','./assets/apple-touch-icon.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));self.skipWaiting()});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(x=>x!==CACHE&&x.startsWith('yasmim-studio-')).map(x=>caches.delete(x)))));self.clients.claim()});

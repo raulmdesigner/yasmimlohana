@@ -1,4 +1,4 @@
-# Yasmim Studio 4.0 — Bordeaux Editorial
+# Yasmim Studio 4.1 — Bordeaux Editorial
 
 Site estático para planejamento de conteúdo e montagem de catálogos, desenvolvido por **Raul Designer**. Layout mobile-first com foco em Safari/iPhone.
 
@@ -52,3 +52,26 @@ PDFs são montados a partir de imagens de cada página. Os dois conservam compos
 - `02_AUDITORIA_COMPARATIVA_E_REDESIGN.md` — relatório da v3 vs v4 e testes
 
 **Créditos:** https://rauldesigner.com.br · https://instagram.com/rauldesigner
+
+## Atualização 4.1 — 16/10/2026
+
+- **Novo editor de catálogo no iPhone:** seleção horizontal de páginas, prévia em destaque e barra próxima ao polegar com Texto, Foto, Estilo e PDF. Campos abrem em painel inferior, sem precisar ficar subindo e descendo.
+- **Fotos:** seleção de imagem → janela para arrastar, ampliar e ajustar ao quadro da página → confirmar. Recorte é aplicado de modo idêntico na prévia e no arquivo exportado; tipos de página adicionais exibem a foto quando informada.
+- **Fontes:** opção de Luxo revisada, sem estilo cursivo ornamental, com Baskerville/Palatino/Georgia em alternativa legível. Mantidas Editorial, Contemporânea e Marcante.
+- **Exportação:** correção de falha de renderização na capa com logo; após gerar PNG, ZIP ou PDF é exibida a tela **Arquivo pronto** com links de download e, para PDF, abertura no navegador e compartilhamento sob ação direta do usuário. O iOS exige a confirmação do usuário para algumas operações.
+- **Persistência:** mantido o banco existente (`yasmim-studio-db`) e a estrutura dos dados da v4; a URL precisa ser a mesma para recuperar edições locais. Faça um backup antes de atualizar.
+- **Cache PWA:** versão incrementada no service worker para baixar o código novo.
+
+### Como atualizar com segurança
+
+1. No site antigo, abra Preferências e **exporte um backup** em JSON.
+2. No GitHub, substitua os arquivos pelos desta versão, preservando pastas e URLs. Não apague o repositório se deseja manter o endereço.
+3. No iPhone, feche o site/app, abra novamente conectado à internet e aguarde a atualização. Caso apareça a versão antiga, abra pelo Safari e atualize.
+4. Faça um teste real com uma foto, uma página e o PDF antes de enviar o catálogo às clientes.
+
+### Limites conhecidos
+
+- A versão foi testada com Chromium, incluindo simulação de tela móvel, upload, arraste/ampliação e PDF de seis páginas; **não foi testada em um iPhone físico com Safari**.
+- A exportação PDF otimizada tem compressão perceptual (não é literalmente sem perdas), adequada a envio digital.
+- Fotos HEIC/HEIF dependem do suporte do navegador para decodificação; caso uma imagem não abra, converta para JPG ou PNG.
+- A janela de recorte salva a composição da fotografia. Para recuperar partes eliminadas num recorte anterior, selecione novamente a imagem original.
